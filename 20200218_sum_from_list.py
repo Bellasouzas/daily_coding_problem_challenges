@@ -37,7 +37,7 @@ def sum_from_list(k: 'int or float' = 0, ls: 'list' = []) -> 'bool':
     """
     assert isinstance(k, (int, float)), 'The first parameter needs to be an int or a float'
     assert isinstance(ls, list), 'The second parameter needs to be a list'
-    assert all(isinstance(x, (int, float)) for x in ls), ' All the elements in list ls need to be int of float types'
+    assert all(isinstance(x, (int, float)) for x in ls), ' All the elements in list ls need to be int or float types'
     i = 0
     j = 1
     mapped = []
@@ -53,7 +53,7 @@ def sum_from_list(k: 'int or float' = 0, ls: 'list' = []) -> 'bool':
 """
 ***TESTS***
 
-# k empty
+# k is empty
 print(sum_from_list([1,2,3]))
 
 # k is an string
@@ -65,7 +65,7 @@ print(sum_from_list([1,2,3], [1,2,3]))
 # k in a dict
 print(sum_from_list({"a":0}, [1,2,3]))
 
-# ls empty
+# ls is empty
 print(sum_from_list(3))
 
 # ls contains a string
