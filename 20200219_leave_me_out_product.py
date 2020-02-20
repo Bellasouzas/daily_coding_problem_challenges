@@ -42,7 +42,7 @@ def leave_me_out(ls: 'list' = []) -> 'list':
     """
 
     assert isinstance(ls, list), 'You need to pass a list of numbers as argument'
-    assert all(isinstance(x, (int, float)) for x in ls), 'All the elements in list ls needs to be int or float types'
+    assert all(isinstance(x, (int)) for x in ls), 'All the elements in list ls needs to be int type'
 
     result = []
     for i in range(len(ls)):
